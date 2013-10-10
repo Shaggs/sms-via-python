@@ -4,7 +4,7 @@
 import serial
 import time
 	 class TextMessage:
-    def __init__(self, recipient="incert number here" , message="insert message" % (when.ctime(), msg, unit)):
+    def __init__(self, recipient="insert number here" , message="insert message" % (when.ctime(), msg, unit)):
         self.recipient = recipient
         self.content = message
 
@@ -15,7 +15,7 @@ import time
         self.content = message
 
     def connectPhone(self):
-        self.ser = serial.Serial('/dev/ttyUSB0', 460800, timeout=5) #for mine this was ttyUSB0 but could be ttyUSB1 etc
+        self.ser = serial.Serial('/dev/ttyUSB0', 460800, timeout=5) #for mine this was ttyUSB0 but could be ttyUSB1 etc. good idea to runs ls usb and find out that way
         time.sleep(1)
 
     def sendMessage(self):
@@ -33,7 +33,7 @@ import time
     def disconnectPhone(self):
         self.ser.close()
 
-sms = TextMessage()
+sms = TextMessage() #if left bank will send message used above or you and add "message" and will be different just to confuse you
 sms.connectPhone()
 sms.sendMessage()
 sms.disconnectPhone()
