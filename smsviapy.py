@@ -4,7 +4,7 @@
 import serial
 import time
 	 class TextMessage:
-    def __init__(self, recipient="insert number here" , message="insert message" % (when.ctime(), msg, unit)):
+    def __init__(self, recipient="insert number here" , message="insert message"):
         self.recipient = recipient
         self.content = message
 
