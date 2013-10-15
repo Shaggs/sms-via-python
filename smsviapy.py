@@ -3,8 +3,9 @@
 
 import serial
 import time
-	 class TextMessage:
-    def __init__(self, recipient="insert number here" , message="insert message"):
+
+class TextMessage:
+    def __init__(self, recipient = raw_input("type the number: \n"), message = raw_input("type the message: \n")):
         self.recipient = recipient
         self.content = message
 
